@@ -1,0 +1,6 @@
+build/
+.deps/
+.local/
+.env
+*.log
+target/

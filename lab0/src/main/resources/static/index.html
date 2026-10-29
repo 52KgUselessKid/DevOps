@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Game Shelf - моя полка игр</title>
+<style>
+:root{color-scheme:dark;font-family:Arial,sans-serif;color:#f0f2f8;background:#101218}*{box-sizing:border-box}body{margin:0}main{max-width:1100px;margin:auto;padding:40px 28px}h1{font-size:34px;letter-spacing:-.5px;margin:0 0 26px}.stats{display:flex;gap:32px;margin:30px 0 38px}.stat b{font-size:28px;display:block}.stat span{font-size:12px;color:#9da5b6}.layout{display:grid;grid-template-columns:320px 1fr;gap:28px;align-items:start}.panel{background:#191c24;border:1px solid #2c303c;border-radius:10px;padding:26px}h2{font-size:20px;margin:0 0 12px}.hint{font-size:13px;color:#929bab;line-height:1.6;margin:0 0 24px}label{display:block;font-size:12px;color:#bdc3cf;margin:18px 0 9px}input,select{width:100%;background:#101218;border:1px solid #373c49;border-radius:8px;padding:13px;color:#edf0f7;font-size:14px}input:focus,select:focus{outline:2px solid #beff69;outline-offset:2px}button{border:0;border-radius:8px;padding:14px 18px;font-weight:700;cursor:pointer}form button{background:#beff69;color:#18210e;width:100%;margin-top:24px}button:disabled{opacity:.5;cursor:wait}.listhead{display:flex;align-items:center;justify-content:space-between;margin:2px 0 20px}.listhead h2{margin:0}.listhead button{background:#232733;color:#c8cedc;font-size:12px;padding:10px 14px}.cards{display:grid;gap:12px}.card{display:flex;gap:18px;align-items:center;background:#191c24;border:1px solid #2c303c;border-radius:12px;padding:20px}.icon{width:52px;height:58px;border-radius:8px;display:grid;place-items:center;font-size:24px;background:#293128;color:#beff69;flex-shrink:0}.details{flex:1;min-width:0}.details h3{margin:0 0 8px;font-size:17px;overflow-wrap:anywhere}.platform{font-size:12px;color:#8f99ad}.badge{font-size:11px;border-radius:20px;padding:8px 11px;background:#2c3141;color:#c4ccdf;white-space:nowrap}.playing{background:#344127;color:#beff69}.completed{background:#263d3f;color:#83d9d0}.empty{padding:50px 22px;text-align:center;border:1px dashed #363c49;border-radius:12px;color:#929bab;line-height:1.8}.message{font-size:13px;line-height:1.5;min-height:20px;margin-top:16px;color:#beff69}.error{color:#ff9b9b}@media(max-width:760px){main{padding:32px 20px}h1{font-size:30px}.layout{grid-template-columns:1fr}.stats{gap:22px}.card{padding:16px;gap:12px}.badge{font-size:10px}}
+</style></head><body><main><h1>Полка с играми</h1><div class="stats"><div class="stat"><b id="total">-</b><span>на полке</span></div><div class="stat"><b id="playing">-</b><span>сейчас в игре</span></div><div class="stat"><b id="completed">-</b><span>пройдено</span></div></div><div class="layout"><section class="panel"><h2>Пополнить коллекцию</h2><p class="hint">Вспомнил классную игру? Запиши её,<br>пока снова не забыл.</p><form id="form"><label for="title">Название игры</label><input id="title" name="title" placeholder="Например, Hollow Knight" maxlength="120" required><label for="platform">Платформа</label><input id="platform" name="platform" placeholder="PC, PlayStation, Switch…" maxlength="60" required><label for="status">На каком ты этапе?</label><select id="status" name="status"><option value="planned">В планах</option><option value="playing">Играю</option><option value="completed">Пройдена</option></select><button id="save">+ Добавить на полку</button></form><div id="message" class="message" role="status" aria-live="polite"></div></section><section><div class="listhead"><h2>Моя полка</h2><button id="refresh">↻ Обновить</button></div><div id="cards" class="cards" aria-live="polite"><div class="empty">Загружаем коллекцию…</div></div></section></div></main>
+<script>
+const $ = id => document.getElementById(id);
+const labels = {planned: 'В планах', playing: 'Играю', completed: 'Пройдена'};
+
+function message(text, error = false) {
+    $('message').textContent = text;
+    $('message').className = 'message' + (error ? ' error' : '');
+}
+
+// Список всегда берём у Java, а не из памяти страницы или localStorage.
+async function load() {
+    const response = await fetch('/api/games');
+    if (!response.ok) throw new Error('Не удалось загрузить игры. Проверь, что база запущена.');
+    const games = await response.json();
+    $('total').textContent = games.length;
+    $('playing').textContent = games.filter(game => game.status === 'playing').length;
+    $('completed').textContent = games.filter(game => game.status === 'completed').length;
+    $('cards').replaceChildren();
+
+    if (!games.length) {
+        const empty = document.createElement('div');
+        empty.className = 'empty';
+        empty.textContent = 'Полка пока пустая. Добавь первую игру - здесь начнётся твоя коллекция.';
+        $('cards').append(empty);
+    }
+
+    for (const game of games) {
+        const card = document.createElement('article');
+        card.className = 'card';
+        const icon = document.createElement('div');
+        icon.className = 'icon';
+        icon.textContent = '✦';
+        icon.setAttribute('aria-hidden', 'true');
+        const detail = document.createElement('div');
+        detail.className = 'details';
+        const title = document.createElement('h3');
+        // textContent покажет название как текст, даже если в нём окажется HTML.
+        title.textContent = game.title;
+        const platform = document.createElement('span');
+        platform.className = 'platform';
+        platform.textContent = game.platform;
+        detail.append(title, platform);
+        const badge = document.createElement('span');
+        badge.className = 'badge ' + game.status;
+        badge.textContent = labels[game.status];
+        card.append(icon, detail, badge);
+        $('cards').append(card);
+    }
+}
+
+$('form').addEventListener('submit', async event => {
+    event.preventDefault();
+    // Пока ждём ответ, отключаем кнопку, чтобы случайно не отправить игру дважды.
+    $('save').disabled = true;
+    message('Сохраняем…');
+    let saved = false;
+    try {
+        const response = await fetch('/api/games', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: new URLSearchParams(new FormData(event.target))
+        });
+        if (!response.ok) {
+            const data = await response.json();
+            throw new Error(data.error || 'Не удалось сохранить игру');
+        }
+        saved = true;
+        event.target.reset();
+        // Запись уже в базе. Теперь заново читаем полку и обновляем счётчики.
+        await load();
+        message('Игра на полке');
+    } catch (error) {
+        message(saved ? 'Игра сохранена, но список не загрузился. Нажми «Обновить».' : error.message, true);
+    } finally {
+        $('save').disabled = false;
+    }
+});
+
+$('refresh').addEventListener('click', () => {
+    load().then(() => message('Полка обновлена.')).catch(error => message(error.message, true));
+});
+load().catch(error => {
+    message(error.message, true);
+    $('cards').textContent = 'Не удалось загрузить коллекцию.';
+});
+</script></body></html>

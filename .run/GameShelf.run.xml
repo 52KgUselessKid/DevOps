@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Game Shelf (lab0)" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.gameshelf.Main" />
+    <module name="game-shelf" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lab0" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
