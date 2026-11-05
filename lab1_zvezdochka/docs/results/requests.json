@@ -1,0 +1,74 @@
+[
+  {
+    "label": "baseline",
+    "path": "/",
+    "method": "GET",
+    "status": "200",
+    "curl_exit": 0,
+    "bytes": 12835,
+    "trace_echo": false
+  },
+  {
+    "label": "missing",
+    "path": "/lab1-not-a-real-page-20261104",
+    "method": "GET",
+    "status": "404",
+    "curl_exit": 0,
+    "bytes": 169,
+    "trace_echo": false
+  },
+  {
+    "label": "robots-control",
+    "path": "/robots.txt",
+    "method": "GET",
+    "status": "200",
+    "curl_exit": 0,
+    "bytes": 30,
+    "trace_echo": false
+  },
+  {
+    "label": "traversal-literal",
+    "path": "/images/../robots.txt",
+    "method": "GET",
+    "status": "200",
+    "curl_exit": 0,
+    "bytes": 30,
+    "trace_echo": false
+  },
+  {
+    "label": "traversal-encoded",
+    "path": "/images/%2e%2e/robots.txt",
+    "method": "GET",
+    "status": "200",
+    "curl_exit": 0,
+    "bytes": 30,
+    "trace_echo": false
+  },
+  {
+    "label": "alias-boundary",
+    "path": "/images../robots.txt",
+    "method": "GET",
+    "status": "404",
+    "curl_exit": 0,
+    "bytes": 169,
+    "trace_echo": false
+  },
+  {
+    "label": "alias-downloads",
+    "path": "/downloads../robots.txt",
+    "method": "GET",
+    "status": "404",
+    "curl_exit": 0,
+    "bytes": 169,
+    "trace_echo": false
+  },
+  {
+    "label": "trace",
+    "path": "/",
+    "method": "TRACE",
+    "status": "405",
+    "curl_exit": 0,
+    "bytes": 173,
+    "trace_echo": false
+  }
+]

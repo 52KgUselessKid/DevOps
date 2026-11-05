@@ -1,0 +1,105 @@
+LAB1 CHECKS | 2026-11-04 12:52:31 UTC
+HTTPS requests use --cacert /tls/local.crt and --connect-to (see check.sh).
+Displayed curl commands omit these repeated options and form/auth arguments.
+
+[1] HTTP -> HTTPS
++ curl -I http://localhost/
+  HTTP 301; X-Backend-Id=-
+  Location: https://localhost/
+
+[2] Frontend is served directly by nginx
++ curl -X GET https://localhost/
+  HTTP 200; X-Backend-Id=-
+
+[3] Round robin: both Java instances answer
++ curl -X GET https://localhost/api/games
+  HTTP 200; X-Backend-Id=backend-1
++ curl -X GET https://localhost/api/games
+  HTTP 200; X-Backend-Id=backend-2
++ curl -X GET https://localhost/api/games
+  HTTP 200; X-Backend-Id=backend-1
++ curl -X GET https://localhost/api/games
+  HTTP 200; X-Backend-Id=backend-2
++ curl -X GET https://localhost/api/games
+  HTTP 200; X-Backend-Id=backend-1
++ curl -X GET https://localhost/api/games
+  HTTP 200; X-Backend-Id=backend-2
+
+[4] Write to PostgreSQL through the proxy
++ curl -X POST https://localhost/api/games
+  HTTP 201; X-Backend-Id=backend-1
+{"id":8}
++ curl -X GET https://localhost/api/games
+  HTTP 200; X-Backend-Id=backend-2
+
+[5] alias /docs/
++ curl -X GET https://localhost/docs/
+  HTTP 200; X-Backend-Id=-
+
+[6] Basic Auth: missing, wrong and correct password
++ curl -X GET https://localhost/admin
+  HTTP 401; X-Backend-Id=-
++ curl -X GET https://localhost/admin/
+  HTTP 401; X-Backend-Id=-
++ curl -X GET https://localhost/admin
+  HTTP 401; X-Backend-Id=-
++ curl -X GET https://localhost/admin
+  HTTP 200; X-Backend-Id=-
+
+[7] Virtual hosts do not leak each other
++ curl -X GET https://status.localhost/
+  HTTP 200; X-Backend-Id=-
++ curl -X GET https://status.localhost/api/games
+  HTTP 404; X-Backend-Id=-
++ curl -X GET https://status.localhost/admin
+  HTTP 404; X-Backend-Id=-
++ curl -I http://foreign.localhost/
+  HTTP 404; X-Backend-Id=-
++ curl -X GET https://localhost/
+  HTTP 404; X-Backend-Id=-
+
+[8] Unknown TLS SNI is rejected
+  TLS handshake rejected for foreign.localhost (even with -k).
+
+[9] Custom 404
++ curl -X GET https://localhost/this-page-does-not-exist
+  HTTP 404; X-Backend-Id=-
+
+[10] Rate limit: 60 parallel API requests
+     13 200
+     47 429
+
+[11] MAIN CHECK: stop backend1, frontend and API must stay alive
++ docker stop --time 3 80ba6d972fd0
+  backend1 is stopped. No nginx reload is performed.
++ curl -X GET https://localhost/
+  HTTP 200; X-Backend-Id=-
++ curl -X GET https://localhost/api/games
+  HTTP 200; X-Backend-Id=backend-2
++ curl -X GET https://localhost/api/games
+  HTTP 200; X-Backend-Id=backend-2
++ curl -X GET https://localhost/api/games
+  HTTP 200; X-Backend-Id=backend-2
++ curl -X GET https://localhost/api/games
+  HTTP 200; X-Backend-Id=backend-2
++ curl -X GET https://localhost/api/games
+  HTTP 200; X-Backend-Id=backend-2
++ curl -X GET https://localhost/api/games
+  HTTP 200; X-Backend-Id=backend-2
+  PASS: saved data is still available; all six responses came from backend-2.
+
+[12] Restore backend1 and verify that both instances return
++ curl -X GET https://localhost/api/games
+  HTTP 200; X-Backend-Id=backend-2
++ curl -X GET https://localhost/api/games
+  HTTP 200; X-Backend-Id=backend-2
++ curl -X GET https://localhost/api/games
+  HTTP 200; X-Backend-Id=backend-1
++ curl -X GET https://localhost/api/games
+  HTTP 200; X-Backend-Id=backend-2
++ curl -X GET https://localhost/api/games
+  HTTP 200; X-Backend-Id=backend-1
++ curl -X GET https://localhost/api/games
+  HTTP 200; X-Backend-Id=backend-2
+
+ALL CHECKS PASSED. Both backends are running again.

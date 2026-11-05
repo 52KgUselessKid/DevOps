@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<title>Teeworlds</title>	<link href="/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+
+<div id="outer">
+
+	<div id="top_left"><div id="top_right"><div id="top_mid">
+
+										
+		<a href="/"><img src="/images/twlogo.png" alt="teeworlds logo" /></a>
+	</div></div></div>
+		<div id="menu_left"><div id="menu_right"><div id="menu_mid">
+			<div id="menu">
+				<ul>
+					<li ><a href="/forum/">Forum</a></li>
+					<li ><a href="/?page=docs&amp;wiki=Contact">Contact</a></li>
+					<!--<li ><a href="http://webchat.quakenet.org/?channels=Teeworlds">Chat</a></li>-->
+					<!-- li ><a href="/?page=docs">Docs</a></li -->
+					<li ><a href="/?page=help">Docs</a></li>
+					<li ><a href="/?page=downloads">Downloads</a></li>
+					<li ><a href="/?page=journal">Blog</a></li>
+					<li id = "current"><a href="/?page=news">News</a></li>
+				</ul>
+			</div>
+		</div></div></div>
+		
+		<div id="tlc"><div id="trc"><div id="tb">&nbsp;</div></div></div>
+		
+		<div id="lb"><div id="rb"><div id="mid">
+
+		<div id="container">
+		
+
+<div style="float: left; padding: 20px 15px 0 15px;" >
+<img src="images/splashtee6.png" alt="" />
+</div>
+<div id="screenshotbar" style="padding-left: 20px;">
+<br/>
+<a href="images/screens/screenshot_desert.png"><img src="images/screens/thumbs/screenshot_desert.png" alt="screenshot" style="border: solid #808080 1px"/></a><br/><br/>
+<a href="images/screens/screenshot_grass.png"><img src="images/screens/thumbs/screenshot_grass.png" alt="screenshot" style="border: solid #808080 1px"/></a><br/><br/>
+<a href="images/screens/screenshot_jungle.png"><img src="images/screens/thumbs/screenshot_jungle.png" alt="screenshot" style="border: solid #808080 1px"/></a><br/><br/>
+<a href="images/screens/screenshot_winter.png"><img src="images/screens/thumbs/screenshot_winter.png" alt="screenshot" style="border: solid #808080 1px"/></a><br/><br/>
+
+</div>
+
+<div style="margin-left: 240px">
+	<h1>A retro multiplayer shooter</h1>
+	Teeworlds is a <b>free online multiplayer game</b>, available for
+	<b>all major operating systems</b>. Battle with up to
+	<b>16 players</b> in a variety of game modes, including
+	<b>Team Deathmatch</b> and <b>Capture The Flag</b>. You can even
+	<b>design your own maps!</b>
+	<br/>
+	<br/>
+	<iframe width="560" height="360" src="//www.youtube-nocookie.com/embed/HIF9B-4CWj8?rel=0" frameborder="0" allowfullscreen></iframe>
+	<br/>
+	<br/>
+	<div id="download_box">
+		<img style="float:left; padding-right: 10px" src="images/dl_arrow.png" alt="download arrow" />
+		<span style="font-size: 16px; font-weight: bold;"><a href="https://github.com/teeworlds/teeworlds/releases/download/0.7.5/teeworlds-0.7.5-win64.zip">Download Teeworlds 0.7.5 for Windows 64bit</a></span><br/>
+		<span><a href="https://github.com/teeworlds/teeworlds/releases/download/0.7.5/teeworlds-0.7.5-win32.zip">Windows 32bit</a> &middot; <a href="https://github.com/teeworlds/teeworlds/releases/download/0.7.5/teeworlds-0.7.5-linux_x86.tar.gz">Linux x86</a> &middot; <a href="https://github.com/teeworlds/teeworlds/releases/download/0.7.5/teeworlds-0.7.5-linux_x86_64.tar.gz">Linux x86_64</a> &middot; <a href="https://github.com/teeworlds/teeworlds/releases/download/0.7.5/teeworlds-0.7.5-osx.dmg">Mac OS X</a> &middot; <a href="https://github.com/teeworlds/teeworlds/releases/download/0.7.5/teeworlds-0.7.5-src.zip">Source (zip)</a> &middot; <a href="https://github.com/teeworlds/teeworlds/releases/download/0.7.5/teeworlds-0.7.5-src.tar.gz">Source (tar.gz)</a></span><br/>
+		<span><a href="?page=downloads">Other systems and versions</a> | <a href="https://github.com/teeworlds/teeworlds">Teeworlds on GitHub</a></span>
+	</div>
+	<br/>
+	<div>Need help? Head over to the <a href="?page=help"><b>support section</b></a>!</div>
+</div>
+
+<div style="clear: both;">&nbsp;</div>
+<hr style="border: none; border-top: solid 1px #dbdbda;"/>
+
+<br/>
+<div id="sidebar">
+	<div class="sidebar_box">
+		<div class="sidebar_topic">Blog Entries</div>
+	</div>
+	<div class="sidebar_box">
+		<a href="?page=journal&amp;id=14784">Changelog 0.7.5</a><br/>
+		<a href="?page=journal&amp;id=14778">Security update</a><br/>
+		<a href="?page=journal&amp;id=13357">Changelog 0.7.4</a><br/>
+		<a href="?page=journal&amp;id=13355">On the fifth day of Christeemas...</a><br/>
+		<a href="?page=journal&amp;id=13352">On the fourth day of Christeemas...</a><br/>
+		<a href="?page=journal&amp;id=13348">On the third day of Christeemas...</a><br/>
+		<a href="?page=journal&amp;id=13345">On the second day of Christeemas...</a><br/>
+		<a href="?page=journal&amp;id=13342">On the first day of Christeemas...</a><br/>
+		<a href="?page=journal&amp;id=13339">Onwards to 0.7.4</a><br/>
+		<a href="?page=journal&amp;id=12806">Changelog 0.7.3</a><br/>
+
+	</div>
+
+	<div class="sidebar_box">
+		&nbsp;
+	</div>
+
+	<div class="sidebar_box">
+		<div class="sidebar_topic">Chat with us!</div>
+	</div>
+
+	<div class="sidebar_box">
+		Join us in <a href="irc://irc.quakenet.org/teeworlds">#teeworlds</a> on Quakenet for a quick chat and meet up with other players!
+	</div>
+
+	<div class="sidebar_box">
+		&nbsp;
+	</div>
+</div>
+	<div id="main">
+	<h1>News</h1>
+
+	<div class="topic_container">
+		<div class="topic_avatar">
+			
+		</div>
+		<div class="topic_item">
+			<div class="topic_header">
+				<div class="topic_title"><a href="?page=news&amp;id=14785">Security update - 0.7.5 released</a></div>
+				<div class="topic_info">
+					(posted by: <span class="topic_poster">Dune</span>) |
+					2020-04-19
+				</div>
+			</div>
+
+			<div class="topic_text">
+				An exploit was discovered, that allows to crash any 0.7 Teeworlds server. Though it does not compromise the security of the host (e.g. no arbitrary accesses in memory) it lets an attacker force a server to repetitively shut down (<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-12066">CVE-2020-12066</a>).<br />
+<br />
+The 0.7.5 release is a security update that aims to patch this <span class="bold">server</span> exploit. As such, it is very light in features, and is mostly made of fixes. You can find the <a href="https://www.teeworlds.com/forum/viewtopic.php?id=14784">full changelog here</a>. If you are not a server host, it is not necessary to update. If you are hosting a server modification, you should at least consider to apply <a href="https://github.com/teeworlds/teeworlds/commit/c68402fa7e279d42886d5951d1ea8ac2facc1ea5">c68402fa7e2</a>.<br />
+<br />
+We are still working towards the next release, which will be 0.7.6.
+				<div class="topic_footer">
+					<a href="forum/viewtopic.php?id=14785">(5 COMMENTS)</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="topic_container">
+		<div class="topic_avatar">
+			
+		</div>
+		<div class="topic_item">
+			<div class="topic_header">
+				<div class="topic_title"><a href="?page=news&amp;id=13358">0.7.4 released!</a></div>
+				<div class="topic_info">
+					(posted by: <span class="topic_poster">Dune</span>) |
+					2019-12-23
+				</div>
+			</div>
+
+			<div class="topic_text">
+				<img class="postimg" src="https://www.teeworlds.com/images/header_0.7.4.png"><br />
+<br />
+Ho ho ho! It's Christeemas, Santee is in town, and Teeworlds 0.7.4 is out!<br />
+<br />
+<span class="bold"><a href="https://www.teeworlds.com/?page=downloads">Download 0.7.4 now!</a></span><br />
+<br />
+<a href="https://www.youtube.com/watch?v=4KDsXsgw-vY"><img class="postimg" src="https://i.imgur.com/XJ5vvf1.png?1"></a><br />
+<br />
+Here is a short list of the bigger changes Santee crafted throughout this year: <br />
+<br />
++ <a href="https://www.teeworlds.com/forum/viewtopic.php?id=13345">Race mode integration (client side)</a><br />
++ <a href="https://www.teeworlds.com/forum/viewtopic.php?id=13348">In-game server browser</a><br />
++ <a href="https://www.teeworlds.com/forum/viewtopic.php?id=13342">Chat pages &amp; upgrades</a><br />
++ <a href="https://www.teeworlds.com/forum/viewtopic.php?id=13355">Statboard upgrade</a><br />
++ <a href="https://www.teeworlds.com/forum/viewtopic.php?id=13352">Winter background theme</a><br />
++ Wide menus mode<br />
++ Server-side chat commands integration<br />
++ 24 new skins, colorable eyes, and many more body parts to use<br />
+<br />
+It also includes some optimisations (faster loads...), gameplay adjustments (prevent skipping death tiles, randomize survival spawns) and lots of smaller changes that you can find on <a href="https://www.teeworlds.com/?page=journal&amp;id=13357">the detailed changelog</a>.<br />
+<br />
+Happy Christeemas!
+				<div class="topic_footer">
+					<a href="forum/viewtopic.php?id=13358">(7 COMMENTS)</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="topic_container">
+		<div class="topic_avatar">
+			
+		</div>
+		<div class="topic_item">
+			<div class="topic_header">
+				<div class="topic_title"><a href="?page=news&amp;id=12808">Minor update to 0.7.3</a></div>
+				<div class="topic_info">
+					(posted by: <span class="topic_poster">Dune</span>) |
+					2019-04-22
+				</div>
+			</div>
+
+			<div class="topic_text">
+				We released a patched up version of the 0.7.3 client. This is because demo recording does not work on the new servers for newly downloaded maps (because of the longer map names). You can <a href="https://www.teeworlds.com/?page=downloads&amp;id=12809">download it here</a> (simply replace your client).<br />
+<br />
+Servers need no change.
+				<div class="topic_footer">
+					<a href="forum/viewtopic.php?id=12808">(1 COMMENT)</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="topic_container">
+		<div class="topic_avatar">
+			
+		</div>
+		<div class="topic_item">
+			<div class="topic_header">
+				<div class="topic_title"><a href="?page=news&amp;id=12807">0.7.3 released!</a></div>
+				<div class="topic_info">
+					(posted by: <span class="topic_poster">Dune</span>) |
+					2019-04-20
+				</div>
+			</div>
+
+			<div class="topic_text">
+				<img class="postimg" src="https://i.imgur.com/yrGz8ge.png"><br />
+<br />
+Rejoice! Teeworlds 0.7.3 is out.<br />
+<br />
+<span class="bold"><a href="https://www.teeworlds.com/?page=downloads&amp;id=12809">Download 0.7.3 now!</a></span><br />
+<br />
+Here is a short list of the bigger changes we made in those past four months: <br />
+<br />
++ advanced scoreboard with game statistics<br />
++ joystick support (experimental!)<br />
++ copy paste (one-way)<br />
++ bot cosmetics (a visual difference between players and NPCs)<br />
++ chat commands (type / in chat)<br />
++ players can change skin without leaving the server (again)<br />
++ live automapper and complete rules for 0.7 tilesets<br />
++ audio toggling HUD<br />
++ an Easter surprise...<br />
+<br />
+We also patched three (client-sided) security vulnerabilities.<br />
+As usual, a complete list of changes and fixes can be found on <a href="https://www.teeworlds.com/forum/viewtopic.php?id=12806">the detailed changelog</a>.<br />
+<br />
+Happy Easteer!
+				<div class="topic_footer">
+					<a href="forum/viewtopic.php?id=12807">(4 COMMENTS)</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="topic_container">
+		<div class="topic_avatar">
+			
+		</div>
+		<div class="topic_item">
+			<div class="topic_header">
+				<div class="topic_title"><a href="?page=news&amp;id=12643">0.7.2 released - Christmas special</a></div>
+				<div class="topic_info">
+					(posted by: <span class="topic_poster">Dune</span>) |
+					2018-12-24
+				</div>
+			</div>
+
+			<div class="topic_text">
+				<img class="postimg" src="https://i.imgur.com/S1JY1W0.png"><br />
+<br />
+We have a Christmas surprise for you this year, open it!<br />
+<br />
+<span class="bold"><a href="https://www.teeworlds.com/?page=downloads&amp;id=12639">Download 0.7.2 - Christmas special now!</a></span><br />
+<br />
+It comes with a much more colorful server browser, demo marker indicators in the menus, a console option to use raw mouse inputs (inp_grab, now reverted to 0.6 by default), a surprise from Santa Tee and lots of fixes.<br />
+The Player and Tee ingame menus were also restored, so you can now select a different skin ingame, although it will only take effect after a reconnect.<br />
+<br />
+A complete list of fixes can be found on <a href="https://www.teeworlds.com/forum/viewtopic.php?id=12644">the detailed changelog</a>.
+				<div class="topic_footer">
+					<a href="forum/viewtopic.php?id=12643">(29 COMMENTS)</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+	<div style='clear:both;'></div>
+	</div>
+
+	</div></div></div>
+	
+	<div id="blc"><div id="brc"><div id="bb">&nbsp;</div></div></div>
+</div>
+
+<div id="page_foot">
+	www.teeworlds.com - Copyright (C) Magnus Auvinen - <a href="/?page=docs&amp;wiki=Contact">Contact us!</a>
+</div>
+
+</body>
+
+</html>

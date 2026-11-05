@@ -1,0 +1,12 @@
+index.html
+robots.txt
+favicon.ico
+downloads
+docs
+forum
+admin
+admin/
+private/
+backup/
+server-status
+lab1-not-a-real-page-20261104

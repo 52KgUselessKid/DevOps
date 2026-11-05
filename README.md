@@ -10,5 +10,7 @@
 | Лабораторная № | ссылка        |
 |----------------|---------------|
 | 0              | [lab0](/lab0) |
+| 1              | [lab1](/lab1) |
+| 1*             | [lab1_zvezdochka](/lab1_zvezdochka) |
 
 ![0.gif](lab0/docs/screenshots/0.gif)

@@ -1,0 +1,8 @@
+name: gameshelf-lab1-audit
+services:
+  audit:
+    build: .
+    volumes:
+      - ./docs/results:/results
+    working_dir: /audit
+    entrypoint: ["python3", "-u", "tools/audit.py"]

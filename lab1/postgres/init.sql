@@ -1,0 +1,2 @@
+CREATE ROLE gamer LOGIN PASSWORD 'gamer_local';
+ALTER DATABASE games OWNER TO gamer;

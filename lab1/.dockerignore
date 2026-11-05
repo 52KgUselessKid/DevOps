@@ -1,0 +1,7 @@
+.git
+**/target
+docs/screenshots
+docs/checks
+README.md
+.env
+local.crt

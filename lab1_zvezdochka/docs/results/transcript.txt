@@ -1,0 +1,76 @@
+Teeworlds: small external nginx check
+UTC: 2026-11-04T12:55:04.888217+00:00
+Target: https://www.teeworlds.com
+No redirects followed; no passwords, writes or recursive scan. Sequential curl, ffuf 1 req/s.
+
+[0] Baseline and nonexistent page
+$ curl --silent --show-error --path-as-is --max-time 15 --connect-timeout 8 --max-filesize 262144 --request GET --user-agent Lab1-Educational-Check/1.0 --dump-header /results/baseline.headers.txt --output /results/baseline.body.txt --write-out '%{http_code}' https://www.teeworlds.com/
+status=200 curl_exit=0
+HTTP/1.1 200 OK
+Server: nginx/1.10.3
+Content-Type: text/html; charset=utf-8
+
+$ curl --silent --show-error --path-as-is --max-time 15 --connect-timeout 8 --max-filesize 262144 --request GET --user-agent Lab1-Educational-Check/1.0 --dump-header /results/missing.headers.txt --output /results/missing.body.txt --write-out '%{http_code}' https://www.teeworlds.com/lab1-not-a-real-page-20261104
+status=404 curl_exit=0
+HTTP/1.1 404 Not Found
+Server: nginx/1.10.3
+Content-Type: text/html; charset=utf-8
+
+[1] Path traversal / alias boundary, public robots.txt only
+$ curl --silent --show-error --path-as-is --max-time 15 --connect-timeout 8 --max-filesize 262144 --request GET --user-agent Lab1-Educational-Check/1.0 --dump-header /results/robots-control.headers.txt --output /results/robots-control.body.txt --write-out '%{http_code}' https://www.teeworlds.com/robots.txt
+status=200 curl_exit=0
+HTTP/1.1 200 OK
+Server: nginx/1.10.3
+Content-Type: text/plain; charset=utf-8
+
+$ curl --silent --show-error --path-as-is --max-time 15 --connect-timeout 8 --max-filesize 262144 --request GET --user-agent Lab1-Educational-Check/1.0 --dump-header /results/traversal-literal.headers.txt --output /results/traversal-literal.body.txt --write-out '%{http_code}' https://www.teeworlds.com/images/../robots.txt
+status=200 curl_exit=0
+HTTP/1.1 200 OK
+Server: nginx/1.10.3
+Content-Type: text/plain; charset=utf-8
+
+$ curl --silent --show-error --path-as-is --max-time 15 --connect-timeout 8 --max-filesize 262144 --request GET --user-agent Lab1-Educational-Check/1.0 --dump-header /results/traversal-encoded.headers.txt --output /results/traversal-encoded.body.txt --write-out '%{http_code}' https://www.teeworlds.com/images/%2e%2e/robots.txt
+status=200 curl_exit=0
+HTTP/1.1 200 OK
+Server: nginx/1.10.3
+Content-Type: text/plain; charset=utf-8
+
+$ curl --silent --show-error --path-as-is --max-time 15 --connect-timeout 8 --max-filesize 262144 --request GET --user-agent Lab1-Educational-Check/1.0 --dump-header /results/alias-boundary.headers.txt --output /results/alias-boundary.body.txt --write-out '%{http_code}' https://www.teeworlds.com/images../robots.txt
+status=404 curl_exit=0
+HTTP/1.1 404 Not Found
+Server: nginx/1.10.3
+Content-Type: text/html; charset=utf-8
+
+$ curl --silent --show-error --path-as-is --max-time 15 --connect-timeout 8 --max-filesize 262144 --request GET --user-agent Lab1-Educational-Check/1.0 --dump-header /results/alias-downloads.headers.txt --output /results/alias-downloads.body.txt --write-out '%{http_code}' https://www.teeworlds.com/downloads../robots.txt
+status=404 curl_exit=0
+HTTP/1.1 404 Not Found
+Server: nginx/1.10.3
+Content-Type: text/html; charset=utf-8
+
+[2] Small page enumeration with ffuf
+$ ffuf -u https://www.teeworlds.com/FUZZ -w tools/paths.txt -t 1 -rate 1 -timeout 10 -maxtime 60 -mc all -noninteractive -s -H 'User-Agent: Lab1-Educational-Check/1.0' -of json -o /results/ffuf.json
+ffuf_exit=0
+STATUS  BYTES  PATH
+404     169    index.html
+200     30     robots.txt
+200     48558  favicon.ico
+404     169    downloads
+404     169    docs
+404     169    forum
+404     169    admin
+404     169    admin/
+404     169    private/
+404     169    backup/
+404     169    server-status
+404     169    lab1-not-a-real-page-20261104
+
+[3] TRACE method, harmless header without cookies or credentials
+$ curl --header 'X-Lab-Canary: harmless-lab1-marker' --silent --show-error --path-as-is --max-time 15 --connect-timeout 8 --max-filesize 262144 --request TRACE --user-agent Lab1-Educational-Check/1.0 --dump-header /results/trace.headers.txt --output /results/trace.body.txt --write-out '%{http_code}' https://www.teeworlds.com/
+status=405 curl_exit=0
+HTTP/1.1 405 Not Allowed
+Server: nginx/1.10.3
+Content-Type: text/html; charset=utf-8
+
+TRACE echoed canary: False
+
+Finished. Status codes alone do not prove a vulnerability; interpretation is in README.md.

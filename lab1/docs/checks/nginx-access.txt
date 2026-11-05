@@ -1,0 +1,266 @@
+nginx-1  | 2026/11/04 12:52:13 [notice] 1#1: signal 1 (SIGHUP) received from 81, reconfiguring
+nginx-1  | 2026/11/04 12:52:13 [notice] 1#1: reconfiguring
+nginx-1  | 2026/11/04 12:52:13 [notice] 1#1: using the "epoll" event method
+nginx-1  | 2026/11/04 12:52:13 [notice] 1#1: start worker processes
+nginx-1  | 2026/11/04 12:52:13 [notice] 1#1: start worker process 87
+nginx-1  | 2026/11/04 12:52:13 [notice] 62#62: gracefully shutting down
+nginx-1  | 2026/11/04 12:52:13 [notice] 62#62: exiting
+nginx-1  | 2026/11/04 12:52:13 [notice] 62#62: exit
+nginx-1  | 2026/11/04 12:52:13 [notice] 1#1: signal 17 (SIGCHLD) received from 62
+nginx-1  | 2026/11/04 12:52:13 [notice] 1#1: worker process 62 exited with code 0
+nginx-1  | 2026/11/04 12:52:13 [notice] 1#1: signal 29 (SIGIO) received
+nginx-1  | 2026-11-04T12:52:31+00:00 host=localhost "HEAD / HTTP/1.1" status=301 upstream=- backend=- limit=-
+nginx-1  | 2026/11/04 12:52:31 [info] 87#87: *439 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:31+00:00 host=localhost "GET / HTTP/1.1" status=200 upstream=- backend=- limit=-
+nginx-1  | 2026/11/04 12:52:31 [info] 87#87: *440 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:31+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.4:8081 backend=backend-1 limit=PASSED
+nginx-1  | 2026/11/04 12:52:31 [info] 87#87: *441 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:31+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.3:8082 backend=backend-2 limit=PASSED
+nginx-1  | 2026/11/04 12:52:31 [info] 87#87: *443 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:31+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.4:8081 backend=backend-1 limit=PASSED
+nginx-1  | 2026/11/04 12:52:31 [info] 87#87: *445 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:32+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.3:8082 backend=backend-2 limit=PASSED
+nginx-1  | 2026/11/04 12:52:32 [info] 87#87: *446 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:32 [info] 87#87: *447 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:32+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.4:8081 backend=backend-1 limit=PASSED
+nginx-1  | 2026-11-04T12:52:32+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.3:8082 backend=backend-2 limit=PASSED
+nginx-1  | 2026/11/04 12:52:32 [info] 87#87: *448 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:32+00:00 host=localhost "POST /api/games HTTP/1.1" status=201 upstream=172.19.0.4:8081 backend=backend-1 limit=PASSED
+nginx-1  | 2026/11/04 12:52:32 [info] 87#87: *449 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:33+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.3:8082 backend=backend-2 limit=PASSED
+nginx-1  | 2026/11/04 12:52:33 [info] 87#87: *450 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:33+00:00 host=localhost "GET /docs/ HTTP/1.1" status=200 upstream=- backend=- limit=-
+nginx-1  | 2026/11/04 12:52:33 [info] 87#87: *451 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:33 [info] 87#87: *452 no user/password was provided for basic authentication, client: 172.19.0.6, server: localhost, request: "GET /admin HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:33+00:00 host=localhost "GET /admin HTTP/1.1" status=401 upstream=- backend=- limit=-
+nginx-1  | 2026/11/04 12:52:33 [info] 87#87: *452 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:33+00:00 host=localhost "GET /admin/ HTTP/1.1" status=401 upstream=- backend=- limit=-
+nginx-1  | 2026/11/04 12:52:33 [info] 87#87: *453 no user/password was provided for basic authentication, client: 172.19.0.6, server: localhost, request: "GET /admin/ HTTP/1.1", host: "localhost"
+nginx-1  | 2026/11/04 12:52:33 [info] 87#87: *453 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:33 [error] 87#87: *454 user "admin": password mismatch, client: 172.19.0.6, server: localhost, request: "GET /admin HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:33+00:00 host=localhost "GET /admin HTTP/1.1" status=401 upstream=- backend=- limit=-
+nginx-1  | 2026/11/04 12:52:33 [info] 87#87: *454 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:33+00:00 host=localhost "GET /admin HTTP/1.1" status=200 upstream=- backend=- limit=-
+nginx-1  | 2026/11/04 12:52:33 [info] 87#87: *455 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:33+00:00 host=status.localhost "GET / HTTP/1.1" status=200 upstream=- backend=- limit=-
+nginx-1  | 2026/11/04 12:52:33 [info] 87#87: *456 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:33+00:00 host=status.localhost "GET /api/games HTTP/1.1" status=404 upstream=- backend=- limit=-
+nginx-1  | 2026/11/04 12:52:33 [info] 87#87: *457 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:33+00:00 host=status.localhost "GET /admin HTTP/1.1" status=404 upstream=- backend=- limit=-
+nginx-1  | 2026/11/04 12:52:33 [info] 87#87: *458 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:33+00:00 host=foreign.localhost "HEAD / HTTP/1.1" status=404 upstream=- backend=- limit=-
+nginx-1  | 2026/11/04 12:52:33 [info] 87#87: *459 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:33+00:00 host=foreign.localhost "GET / HTTP/1.1" status=404 upstream=- backend=- limit=-
+nginx-1  | 2026/11/04 12:52:33 [info] 87#87: *460 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:33 [info] 87#87: *461 handshake rejected while SSL handshaking, client: 172.19.0.6, server: 0.0.0.0:443
+nginx-1  | 2026-11-04T12:52:33+00:00 host=localhost "GET /this-page-does-not-exist HTTP/1.1" status=404 upstream=- backend=- limit=-
+nginx-1  | 2026/11/04 12:52:33 [info] 87#87: *462 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.3:8082 backend=backend-2 limit=PASSED
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *465 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *463 limiting requests, excess: 10.480 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *494 limiting requests, excess: 10.430 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.3:8082 backend=backend-2 limit=PASSED
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *476 limiting requests, excess: 10.430 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *478 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *477 limiting requests, excess: 10.390 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *492 limiting requests, excess: 10.390 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *476 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.3:8082 backend=backend-2 limit=PASSED
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.4:8081 backend=backend-1 limit=PASSED
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *470 limiting requests, excess: 10.300 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *492 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *494 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *475 limiting requests, excess: 10.260 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *499 limiting requests, excess: 10.230 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *470 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *464 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *480 limiting requests, excess: 10.210 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *477 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *480 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.4:8081 backend=backend-1 limit=PASSED
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *468 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *475 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *474 limiting requests, excess: 10.180 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *474 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.3:8082 backend=backend-2 limit=PASSED
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *503 limiting requests, excess: 10.140 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *500 limiting requests, excess: 10.130 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *484 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *499 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.4:8081 backend=backend-1 limit=PASSED
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *466 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *473 limiting requests, excess: 10.080 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *500 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *505 limiting requests, excess: 10.050 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *463 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *507 limiting requests, excess: 10.010 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *487 limiting requests, excess: 10.950 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *481 limiting requests, excess: 10.950 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.4:8081 backend=backend-1 limit=PASSED
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *486 limiting requests, excess: 10.880 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *472 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *473 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *487 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *503 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *495 limiting requests, excess: 10.820 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.4:8081 backend=backend-1 limit=PASSED
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *481 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *506 limiting requests, excess: 10.770 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *497 limiting requests, excess: 10.770 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *507 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *506 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *469 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *498 limiting requests, excess: 10.700 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *505 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *497 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *496 limiting requests, excess: 10.660 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *516 limiting requests, excess: 10.660 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *508 limiting requests, excess: 10.630 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *486 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *467 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.4:8081 backend=backend-1 limit=PASSED
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.3:8082 backend=backend-2 limit=PASSED
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *509 limiting requests, excess: 10.580 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *495 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *496 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *509 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *516 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *513 limiting requests, excess: 10.480 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *471 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *508 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *504 limiting requests, excess: 10.480 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *510 limiting requests, excess: 10.440 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *489 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *513 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *512 limiting requests, excess: 10.400 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *517 limiting requests, excess: 10.400 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *514 limiting requests, excess: 10.400 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *515 limiting requests, excess: 10.400 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *504 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *498 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *518 limiting requests, excess: 10.300 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *511 limiting requests, excess: 10.300 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *512 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *501 limiting requests, excess: 10.300 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *517 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *515 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *510 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *514 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *520 limiting requests, excess: 10.200 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.3:8082 backend=backend-2 limit=PASSED
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *511 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *518 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *519 limiting requests, excess: 10.200 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *521 limiting requests, excess: 10.160 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *501 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *523 limiting requests, excess: 10.110 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *491 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *520 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *519 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *521 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *524 limiting requests, excess: 10.110 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *523 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *522 limiting requests, excess: 10.080 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *524 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *525 limiting requests, excess: 10.050 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *526 limiting requests, excess: 10.030 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *522 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *527 limiting requests, excess: 10.010 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *525 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *526 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *527 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *529 limiting requests, excess: 10.960 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=429 upstream=- backend=- limit=REJECTED
+nginx-1  | 2026/11/04 12:52:35 [error] 87#87: *530 limiting requests, excess: 10.950 by zone "api", client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", host: "localhost"
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *529 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *530 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:35+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.4:8081 backend=backend-1 limit=PASSED
+nginx-1  | 2026/11/04 12:52:35 [info] 87#87: *528 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:38+00:00 host=localhost "GET / HTTP/1.1" status=200 upstream=- backend=- limit=-
+nginx-1  | 2026/11/04 12:52:38 [info] 87#87: *531 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:38+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.3:8082 backend=backend-2 limit=PASSED
+nginx-1  | 2026/11/04 12:52:38 [info] 87#87: *532 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:52:39 [warn] 87#87: *533 upstream server temporarily disabled while connecting to upstream, client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", upstream: "http://172.19.0.4:8081/api/games", host: "localhost"
+nginx-1  | 2026/11/04 12:52:39 [error] 87#87: *533 upstream timed out (110: Operation timed out) while connecting to upstream, client: 172.19.0.6, server: localhost, request: "GET /api/games HTTP/1.1", upstream: "http://172.19.0.4:8081/api/games", host: "localhost"
+nginx-1  | 2026-11-04T12:52:39+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.4:8081, 172.19.0.3:8082 backend=backend-2 limit=PASSED
+nginx-1  | 2026/11/04 12:52:39 [info] 87#87: *533 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:39+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.3:8082 backend=backend-2 limit=PASSED
+nginx-1  | 2026/11/04 12:52:39 [info] 87#87: *535 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:40+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.3:8082 backend=backend-2 limit=PASSED
+nginx-1  | 2026/11/04 12:52:40 [info] 87#87: *536 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:40+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.3:8082 backend=backend-2 limit=PASSED
+nginx-1  | 2026/11/04 12:52:40 [info] 87#87: *537 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:40+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.3:8082 backend=backend-2 limit=PASSED
+nginx-1  | 2026/11/04 12:52:40 [info] 87#87: *538 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:53+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.3:8082 backend=backend-2 limit=PASSED
+nginx-1  | 2026/11/04 12:52:53 [info] 87#87: *539 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:53+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.3:8082 backend=backend-2 limit=PASSED
+nginx-1  | 2026/11/04 12:52:53 [info] 87#87: *540 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:53+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.4:8081 backend=backend-1 limit=PASSED
+nginx-1  | 2026/11/04 12:52:53 [info] 87#87: *541 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:53+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.3:8082 backend=backend-2 limit=PASSED
+nginx-1  | 2026/11/04 12:52:53 [info] 87#87: *543 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:54+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.4:8081 backend=backend-1 limit=PASSED
+nginx-1  | 2026/11/04 12:52:54 [info] 87#87: *544 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026-11-04T12:52:54+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.3:8082 backend=backend-2 limit=PASSED
+nginx-1  | 2026/11/04 12:52:54 [info] 87#87: *545 client 172.19.0.6 closed keepalive connection
+nginx-1  | 2026/11/04 12:53:32 [info] 87#87: *546 SSL_do_handshake() failed (SSL: error:0A000416:SSL routines::ssl/tls alert certificate unknown:SSL alert number 46) while SSL handshaking, client: 172.19.0.1, server: 0.0.0.0:443
+nginx-1  | 2026-11-04T12:53:32+00:00 host=localhost "GET / HTTP/1.1" status=200 upstream=- backend=- limit=-
+nginx-1  | 2026-11-04T12:53:32+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.4:8081 backend=backend-1 limit=PASSED
+nginx-1  | 2026-11-04T12:53:32+00:00 host=localhost "GET / HTTP/1.1" status=200 upstream=- backend=- limit=-
+nginx-1  | 2026-11-04T12:53:32+00:00 host=localhost "GET /api/games HTTP/1.1" status=200 upstream=172.19.0.3:8082 backend=backend-2 limit=PASSED
+nginx-1  | 2026/11/04 12:53:32 [info] 87#87: *550 SSL_do_handshake() failed (SSL: error:0A000416:SSL routines::ssl/tls alert certificate unknown:SSL alert number 46) while SSL handshaking, client: 172.19.0.1, server: 0.0.0.0:443
+nginx-1  | 2026-11-04T12:53:32+00:00 host=status.localhost "GET / HTTP/1.1" status=200 upstream=- backend=- limit=-
+nginx-1  | 2026-11-04T12:53:32+00:00 host=localhost "GET /no-such-page HTTP/1.1" status=404 upstream=- backend=- limit=-
+nginx-1  | 2026/11/04 12:53:32 [info] 87#87: *547 client 172.19.0.1 closed keepalive connection
+nginx-1  | 2026/11/04 12:53:32 [info] 87#87: *551 client 172.19.0.1 closed keepalive connection
+nginx-1  | 2026-11-04T12:53:44+00:00 host=localhost "HEAD / HTTP/1.1" status=301 upstream=- backend=- limit=-
+nginx-1  | 2026/11/04 12:53:44 [info] 87#87: *552 client 172.19.0.1 closed keepalive connection
+nginx-1  | 2026-11-04T12:53:44+00:00 host=localhost "HEAD / HTTP/1.1" status=200 upstream=- backend=- limit=-
+nginx-1  | 2026/11/04 12:53:44 [info] 87#87: *553 client 172.19.0.1 closed keepalive connection
