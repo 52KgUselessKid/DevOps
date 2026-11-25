@@ -1,0 +1,10 @@
+{
+  "bad_baseline": 63.28,
+  "bad_one-line-change": 51.45,
+  "bad_size_bytes": 881958811,
+  "bad_user": "root",
+  "good_baseline": 88.2,
+  "good_one-line-change": 5.41,
+  "good_size_bytes": 285823171,
+  "good_user": "shelf"
+}

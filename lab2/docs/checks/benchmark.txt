@@ -1,0 +1,16 @@
+LAB2 BUILD CACHE | 2026-11-23T21:12:59.564243+00:00
+Docker server 29.9.2 / amd64
+
+$ docker build -f backend/Dockerfile.bad -t gameshelf-lab2-backend:bad backend
+bad / baseline: 63.28 seconds
+bad / one-line-change: 51.45 seconds
+Image size: 881958811 bytes / 841.1 MiB
+Image runtime user: root
+
+$ docker build -f backend/Dockerfile -t gameshelf-lab2-backend:good backend
+good / baseline: 88.20 seconds
+good / one-line-change: 5.41 seconds
+Image size: 285823171 bytes / 272.6 MiB
+Image runtime user: shelf
+
+PASS: good image is smaller; source files in the repository were not edited.

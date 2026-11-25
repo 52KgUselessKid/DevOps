@@ -1,0 +1,8 @@
+# Только для эксперимента: эта конфигурация специально тесная.
+services:
+  backend:
+    cpus: 1.00
+    mem_limit: 72m
+    memswap_limit: 72m
+    environment:
+      JAVA_TOOL_OPTIONS: "-Xms16m -Xmx256m -XX:ActiveProcessorCount=2"

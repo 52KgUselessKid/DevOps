@@ -1,0 +1,25 @@
+LAB2 STAR / RECOVERY | 2026-11-23T21:22:49.828466+00:00
+[1] All services before failure
+NAME                             IMAGE                          COMMAND                  SERVICE    CREATED          STATUS                    PORTS
+gameshelf-lab2-star-backend-1    gameshelf-lab2-backend:good    "java -cp /app/app.j…"   backend    54 seconds ago   Up 53 seconds (healthy)   8080/tcp
+gameshelf-lab2-star-db-1         gameshelf-lab2-postgres:good   "docker-entrypoint.s…"   db         11 minutes ago   Up 9 minutes (healthy)    5432/tcp
+gameshelf-lab2-star-frontend-1   gameshelf-lab2-frontend:good   "/docker-entrypoint.…"   frontend   11 minutes ago   Up 11 minutes (healthy)   127.0.0.1:8083->80/tcp
+
+DB RestartCount before crash=2
+Saved game id=6052
+[2] Crash PostgreSQL process inside its container
+$ docker compose exec -T --user postgres db pg_ctl -D /var/lib/postgresql/data stop -m immediate
+exec exit=137
+t=1.3s HTTP=503 DB=restarting restarts=3
+t=2.3s HTTP=200 DB=running restarts=3
+DB RestartCount after crash=3
+[3] curl after automatic restart
+$ curl http://frontend/api/games -> 200
+Same database container, higher RestartCount; backend was not restarted.
+Saved game id=6052 is still in the database.
+NAME                             IMAGE                          COMMAND                  SERVICE    CREATED          STATUS                            PORTS
+gameshelf-lab2-star-backend-1    gameshelf-lab2-backend:good    "java -cp /app/app.j…"   backend    57 seconds ago   Up 56 seconds (healthy)           8080/tcp
+gameshelf-lab2-star-db-1         gameshelf-lab2-postgres:good   "docker-entrypoint.s…"   db         11 minutes ago   Up 2 seconds (health: starting)   5432/tcp
+gameshelf-lab2-star-frontend-1   gameshelf-lab2-frontend:good   "/docker-entrypoint.…"   frontend   11 minutes ago   Up 11 minutes (healthy)           127.0.0.1:8083->80/tcp
+
+PASS: automatic recovery without docker compose up/start.

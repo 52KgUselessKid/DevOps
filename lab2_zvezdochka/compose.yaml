@@ -1,0 +1,71 @@
+name: gameshelf-lab2-star
+services:
+  db:
+    image: gameshelf-lab2-postgres:good
+    build: ../lab2/postgres
+    environment:
+      POSTGRES_DB: games
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres_local
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: unless-stopped
+    cpus: 0.50
+    mem_limit: 256m
+    memswap_limit: 256m
+    shm_size: 64m
+    networks: [data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h 127.0.0.1 -U postgres -d games"]
+      interval: 3s
+      timeout: 2s
+      retries: 20
+
+  backend:
+    image: gameshelf-lab2-backend:good
+    build: ../lab2/backend
+    environment:
+      DB_URL: jdbc:postgresql://db:5432/games?connectTimeout=2&socketTimeout=3
+      DB_USER: gamer
+      DB_PASSWORD: gamer_local
+      INSTANCE_ID: lab2-star
+    restart: unless-stopped
+    cpus: 1.00
+    mem_limit: 384m
+    memswap_limit: 384m
+    networks: [web, data]
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    image: gameshelf-lab2-frontend:good
+    build: ../lab2/frontend
+    restart: unless-stopped
+    cpus: 0.25
+    mem_limit: 64m
+    memswap_limit: 64m
+    ports: ["127.0.0.1:8083:80"]
+    networks: [web]
+    depends_on:
+      backend:
+        condition: service_healthy
+
+  checker:
+    profiles: [tools]
+    build: ../lab2/tools
+    image: gameshelf-lab2-tools
+    volumes:
+      - ../lab2:/workspace/lab2:ro
+      - .:/workspace/lab2_zvezdochka
+      - /var/run/docker.sock:/var/run/docker.sock
+    working_dir: /workspace/lab2_zvezdochka
+    entrypoint: ["python3", "-u", "tools/check.py"]
+    networks: [web]
+
+networks:
+  web:
+  data:
+    internal: true
+volumes:
+  pgdata:

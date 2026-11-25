@@ -1,0 +1,3 @@
+Bad image: same Java API on the lab2 data network.
+GET http://127.0.0.1:8080/api/games -> 200
+whoami -> root

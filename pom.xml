@@ -11,5 +11,6 @@
     <!-- Сюда добавляем готовые Maven-лабы. У остальных папок свой способ запуска. -->
     <module>lab0</module>
     <module>lab1/backend</module>
+    <module>lab2/backend</module>
   </modules>
 </project>

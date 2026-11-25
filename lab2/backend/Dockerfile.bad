@@ -1,0 +1,10 @@
+# Плохо: тег плавающий, новая сборка может получить другую базу.
+FROM maven:3.9-eclipse-temurin-21
+WORKDIR /app
+# Плохо: любая правка исходников сбрасывает слой с загрузкой зависимостей.
+COPY . .
+RUN mvn -B -q -DskipTests package dependency:copy-dependencies
+# Плохо: Maven, JDK, исходники и кеш зависимостей остаются в готовом образе.
+# Плохо: USER не задан, поэтому приложение работает от root.
+# Плохо: HEALTHCHECK отсутствует, о готовности приложения Docker не знает.
+CMD ["java", "-cp", "target/backend-lab2-1.0.0.jar:target/dependency/*", "com.gameshelf.lab2.Main"]

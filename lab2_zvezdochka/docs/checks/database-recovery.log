@@ -1,0 +1,130 @@
+db-1  | 2026-11-23 21:21:37.603 UTC [1803] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:37.603 UTC [1801] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:37.603 UTC [1799] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:37.603 UTC [1798] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:37.603 UTC [1797] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:37.603 UTC [1796] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:37.604 UTC [1800] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:40.446 UTC [1828] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:40.446 UTC [1827] LOG:  could not send data to client: Connection reset by peer
+db-1  | 2026-11-23 21:21:40.446 UTC [1827] STATEMENT:  SELECT id,title,platform,status FROM games ORDER BY id DESC
+db-1  | 2026-11-23 21:21:40.446 UTC [1827] FATAL:  connection to client lost
+db-1  | 2026-11-23 21:21:40.446 UTC [1827] STATEMENT:  SELECT id,title,platform,status FROM games ORDER BY id DESC
+db-1  | 2026-11-23 21:21:40.446 UTC [1826] LOG:  could not send data to client: Connection reset by peer
+db-1  | 2026-11-23 21:21:40.446 UTC [1826] STATEMENT:  SELECT id,title,platform,status FROM games ORDER BY id DESC
+db-1  | 2026-11-23 21:21:40.446 UTC [1826] FATAL:  connection to client lost
+db-1  | 2026-11-23 21:21:40.446 UTC [1826] STATEMENT:  SELECT id,title,platform,status FROM games ORDER BY id DESC
+db-1  | 2026-11-23 21:21:40.446 UTC [1823] LOG:  could not send data to client: Connection reset by peer
+db-1  | 2026-11-23 21:21:40.446 UTC [1823] STATEMENT:  SELECT id,title,platform,status FROM games ORDER BY id DESC
+db-1  | 2026-11-23 21:21:40.446 UTC [1823] FATAL:  connection to client lost
+db-1  | 2026-11-23 21:21:40.446 UTC [1823] STATEMENT:  SELECT id,title,platform,status FROM games ORDER BY id DESC
+db-1  | 2026-11-23 21:21:40.446 UTC [1824] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:40.450 UTC [1820] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:40.450 UTC [1819] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:40.450 UTC [1822] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:40.450 UTC [1830] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:40.450 UTC [1814] LOG:  could not send data to client: Connection reset by peer
+db-1  | 2026-11-23 21:21:40.450 UTC [1814] STATEMENT:  SELECT id,title,platform,status FROM games ORDER BY id DESC
+db-1  | 2026-11-23 21:21:40.450 UTC [1814] FATAL:  connection to client lost
+db-1  | 2026-11-23 21:21:40.450 UTC [1814] STATEMENT:  SELECT id,title,platform,status FROM games ORDER BY id DESC
+db-1  | 2026-11-23 21:21:40.451 UTC [1829] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:40.452 UTC [1816] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:44.455 UTC [1854] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:44.455 UTC [1852] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:44.455 UTC [1849] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:44.455 UTC [1848] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:44.455 UTC [1844] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:44.456 UTC [1850] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:44.457 UTC [1839] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:50.084 UTC [1885] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:50.084 UTC [1884] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:50.084 UTC [1883] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:50.084 UTC [1881] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:50.084 UTC [1880] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:50.084 UTC [1878] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:50.084 UTC [1877] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:50.084 UTC [1875] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:21:50.089 UTC [1879] LOG:  could not receive data from client: Connection reset by peer
+db-1  | 2026-11-23 21:22:50.433 UTC [1] LOG:  received immediate shutdown request
+db-1  | 2026-11-23 21:22:50.442 UTC [1] LOG:  database system is shut down
+db-1  | 
+db-1  | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db-1  | 
+db-1  | 2026-11-23 21:22:50.957 UTC [1] LOG:  starting PostgreSQL 17.11 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+db-1  | 2026-11-23 21:22:50.957 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db-1  | 2026-11-23 21:22:50.957 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db-1  | 2026-11-23 21:22:50.968 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-1  | 2026-11-23 21:22:50.980 UTC [29] LOG:  database system was interrupted; last known up at 2026-11-23 21:18:05 UTC
+db-1  | 2026-11-23 21:22:51.624 UTC [30] FATAL:  the database system is starting up
+db-1  | 2026-11-23 21:22:51.779 UTC [29] LOG:  database system was not properly shut down; automatic recovery in progress
+db-1  | 2026-11-23 21:22:51.786 UTC [29] LOG:  redo starts at 0/1ADBED8
+db-1  | 2026-11-23 21:22:51.795 UTC [29] LOG:  invalid record length at 0/1C69290: expected at least 24, got 0
+db-1  | 2026-11-23 21:22:51.795 UTC [29] LOG:  redo done at 0/1C69268 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.01 s
+db-1  | 2026-11-23 21:22:51.841 UTC [27] LOG:  checkpoint starting: end-of-recovery immediate wait
+db-1  | 2026-11-23 21:22:51.881 UTC [27] LOG:  checkpoint complete: wrote 103 buffers (0.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.010 s, sync=0.012 s, total=0.045 s; sync files=11, longest=0.005 s, average=0.001 s; distance=1588 kB, estimate=1588 kB; lsn=0/1C69290, redo lsn=0/1C69290
+db-1  | 2026-11-23 21:22:51.890 UTC [1] LOG:  database system is ready to accept connections
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:23 [lab2-star] [DB] Read games: 1502
+backend-1  | 21:22:23 [lab2-star] [DB] Read games: 1502
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:23 [lab2-star] [DB] Read games: 1502
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:23 [lab2-star] [DB] Read games: 1502
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:23 [lab2-star] [DB] Read games: 1502
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:23 [lab2-star] [DB] Read games: 1502
+backend-1  | 21:22:23 [lab2-star] [DB] Read games: 1502
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:23 [lab2-star] [DB] Read games: 1502
+backend-1  | 21:22:23 [lab2-star] [DB] Read games: 1502
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:23 [lab2-star] [DB] Read games: 1502
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:23 [lab2-star] [DB] Read games: 1502
+backend-1  | 21:22:23 [lab2-star] [DB] Read games: 1502
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:23 [lab2-star] [DB] Read games: 1502
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:23 [lab2-star] [DB] Read games: 1502
+backend-1  | 21:22:23 [lab2-star] [DB] Read games: 1502
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:23 [lab2-star] [DB] Read games: 1502
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:23 [lab2-star] [DB] Read games: 1502
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:23 [lab2-star] [DB] Read games: 1502
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:23 [lab2-star] [DB] Read games: 1502
+backend-1  | 21:22:23 [lab2-star] [DB] Read games: 1502
+backend-1  | 21:22:23 [lab2-star] [DB] Read games: 1502
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:23 [lab2-star] [DB] Read games: 1502
+backend-1  | 21:22:23 [lab2-star] [DB] Read games: 1502
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:23 [lab2-star] [HTTP] GET /health -> 200
+backend-1  | 21:22:28 [lab2-star] [HTTP] GET /health -> 200
+backend-1  | 21:22:33 [lab2-star] [HTTP] GET /health -> 200
+backend-1  | 21:22:38 [lab2-star] [HTTP] GET /health -> 200
+backend-1  | 21:22:43 [lab2-star] [HTTP] GET /health -> 200
+backend-1  | 21:22:48 [lab2-star] [HTTP] GET /health -> 200
+backend-1  | 21:22:49 [lab2-star] [DB] Read games: 2
+backend-1  | 21:22:49 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:50 [lab2-star] [DB] Saved game id=6052
+backend-1  | 21:22:50 [lab2-star] [HTTP] POST /api/games -> 201
+backend-1  | Database request failed: 57P03
+backend-1  | 21:22:51 [lab2-star] [HTTP] GET /api/games -> 503
+backend-1  | 21:22:52 [lab2-star] [DB] Read games: 3
+backend-1  | 21:22:52 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:52 [lab2-star] [DB] Read games: 3
+backend-1  | 21:22:52 [lab2-star] [HTTP] GET /api/games -> 200
+backend-1  | 21:22:53 [lab2-star] [DB] Read games: 3
+backend-1  | 21:22:53 [lab2-star] [HTTP] GET /api/games -> 200

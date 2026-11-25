@@ -1,0 +1,43 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.bad
+#1 transferring dockerfile: 863B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/maven:3.9-eclipse-temurin-21
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 32B
+#3 transferring context: 79B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/maven:3.9-eclipse-temurin-21@sha256:99e61abcff91a9b1333463bd8451fb18495d6eba9250ac66a338b518f8278320
+#4 resolve docker.io/library/maven:3.9-eclipse-temurin-21@sha256:99e61abcff91a9b1333463bd8451fb18495d6eba9250ac66a338b518f8278320 0.0s done
+#4 CACHED
+
+#5 [internal] load build context
+#5 transferring context: 12.78kB done
+#5 DONE 0.1s
+
+#6 [2/4] WORKDIR /app
+#6 DONE 0.1s
+
+#7 [3/4] COPY . .
+#7 DONE 0.1s
+
+#8 [4/4] RUN mvn -B -q -DskipTests package dependency:copy-dependencies
+#8 DONE 59.6s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 2.0s done
+#9 exporting manifest sha256:8cb58811eb1131f0578db641fd6ad05a15725652525cf2289fd8986ed62000aa 0.0s done
+#9 exporting config sha256:ed7c3f2a18fcf24cdea69622c5d44efbf3df6654f9564df30c4fdecd32796202 0.0s done
+#9 exporting attestation manifest sha256:c7071a5b3293b696fb89cdfeb13171ba06b2609dfa5f847d1835b94df5eb5232 0.0s done
+#9 exporting manifest list sha256:69ff78d3c92147fdb1d169ca6525395c2199198187d07905ce20c173d92a0c15
+#9 exporting manifest list sha256:69ff78d3c92147fdb1d169ca6525395c2199198187d07905ce20c173d92a0c15 0.0s done
+#9 naming to docker.io/library/gameshelf-lab2-backend:bad done
+#9 unpacking to docker.io/library/gameshelf-lab2-backend:bad
+#9 unpacking to docker.io/library/gameshelf-lab2-backend:bad 0.5s done
+#9 DONE 2.7s

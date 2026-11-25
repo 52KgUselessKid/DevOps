@@ -1,0 +1,39 @@
+LAB2 STAR / LIMITS | 2026-11-23T21:20:51.639737+00:00
+[1] CPU too tight: 0.10 CPU, memory stays 384 MiB
+Load: cpu-tight; GET /api/games; workers=16; duration=20s
+{"requests": 68, "statuses": {"200": 4, "504": 64}, "elapsed": 27.29, "p95_seconds": 5.008}
+Last docker stats sample:
+2026-11-23T21:21:20.436251+00:00
+gameshelf-lab2-star-frontend-1 CPU=0.05% MEM=8.004MiB / 64MiB
+gameshelf-lab2-star-backend-1 CPU=11.69% MEM=81.45MiB / 384MiB
+gameshelf-lab2-star-db-1 CPU=3.91% MEM=32.88MiB / 256MiB
+
+cpu.stat nr_throttled delta=291
+cpu.stat throttled_usec delta=110027542
+[2] Memory too tight: compose.tight.yaml, 72 MiB, Java Xmx256m
+$ docker compose -f compose.yaml -f compose.tight.yaml up -d --no-deps backend
+Load: memory-tight; GET /api/games; workers=16; duration=25s
+{"requests": 1954, "statuses": {"502": 1869, "504": 48, "200": 36, "0": 1}, "elapsed": 27.58, "p95_seconds": 1.171}
+Last docker stats sample:
+2026-11-23T21:21:55.906074+00:00
+gameshelf-lab2-star-frontend-1 CPU=0.00% MEM=8.117MiB / 64MiB
+gameshelf-lab2-star-backend-1 CPU=0.00% MEM=0B / 0B
+gameshelf-lab2-star-db-1 CPU=3.31% MEM=20.13MiB / 256MiB
+
+OOM events: 6; restarts=7
+[3] Restore normal limits even if an experimental check fails
+$ docker compose up -d --no-deps --force-recreate backend
+Load: stable; GET /api/games; workers=16; duration=25s
+{"requests": 838, "statuses": {"200": 838}, "elapsed": 27.33, "p95_seconds": 0.676}
+Last docker stats sample:
+2026-11-23T21:22:25.586273+00:00
+gameshelf-lab2-star-frontend-1 CPU=0.00% MEM=9.617MiB / 64MiB
+gameshelf-lab2-star-backend-1 CPU=0.14% MEM=73.8MiB / 384MiB
+gameshelf-lab2-star-db-1 CPU=26.46% MEM=20.17MiB / 256MiB
+
+Stable backend limits: 1.00 CPU, 384 MiB; restarts=0
+[4] Actual limits for all three services
+frontend: CPU=0.25; memory=64 MiB
+backend: CPU=1.0; memory=384 MiB
+db: CPU=0.5; memory=256 MiB
+PASS: CPU throttling and OOM observed; stable profile returned only HTTP 200.

@@ -1,0 +1,39 @@
+2026-11-23T21:21:30.866701+00:00
+gameshelf-lab2-star-frontend-1 CPU=0.90% MEM=8.355MiB / 64MiB
+gameshelf-lab2-star-backend-1 CPU=0.00% MEM=30.6MiB / 72MiB
+gameshelf-lab2-star-db-1 CPU=13.62% MEM=40.34MiB / 256MiB
+
+2026-11-23T21:21:34.397678+00:00
+gameshelf-lab2-star-frontend-1 CPU=3.33% MEM=8.34MiB / 64MiB
+gameshelf-lab2-star-backend-1 CPU=104.64% MEM=41.37MiB / 72MiB
+gameshelf-lab2-star-db-1 CPU=12.17% MEM=20.14MiB / 256MiB
+
+2026-11-23T21:21:37.942612+00:00
+gameshelf-lab2-star-frontend-1 CPU=4.52% MEM=8.098MiB / 64MiB
+gameshelf-lab2-star-backend-1 CPU=107.35% MEM=64.09MiB / 72MiB
+gameshelf-lab2-star-db-1 CPU=4.97% MEM=20.16MiB / 256MiB
+
+2026-11-23T21:21:41.473237+00:00
+gameshelf-lab2-star-frontend-1 CPU=5.20% MEM=8.395MiB / 64MiB
+gameshelf-lab2-star-backend-1 CPU=0.00% MEM=0B / 0B
+gameshelf-lab2-star-db-1 CPU=12.15% MEM=20.15MiB / 256MiB
+
+2026-11-23T21:21:45.321577+00:00
+gameshelf-lab2-star-frontend-1 CPU=1.75% MEM=8.453MiB / 64MiB
+gameshelf-lab2-star-backend-1 CPU=0.00% MEM=0B / 0B
+gameshelf-lab2-star-db-1 CPU=6.25% MEM=37.11MiB / 256MiB
+
+2026-11-23T21:21:48.849916+00:00
+gameshelf-lab2-star-frontend-1 CPU=10.28% MEM=8.152MiB / 64MiB
+gameshelf-lab2-star-backend-1 CPU=0.00% MEM=0B / 0B
+gameshelf-lab2-star-db-1 CPU=0.00% MEM=20.14MiB / 256MiB
+
+2026-11-23T21:21:52.376393+00:00
+gameshelf-lab2-star-frontend-1 CPU=0.00% MEM=8.48MiB / 64MiB
+gameshelf-lab2-star-backend-1 CPU=0.00% MEM=0B / 0B
+gameshelf-lab2-star-db-1 CPU=9.00% MEM=20.15MiB / 256MiB
+
+2026-11-23T21:21:55.906074+00:00
+gameshelf-lab2-star-frontend-1 CPU=0.00% MEM=8.117MiB / 64MiB
+gameshelf-lab2-star-backend-1 CPU=0.00% MEM=0B / 0B
+gameshelf-lab2-star-db-1 CPU=3.31% MEM=20.13MiB / 256MiB

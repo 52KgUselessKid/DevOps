@@ -1,0 +1,30 @@
+{
+  "cpu-tight": {
+    "requests": 68,
+    "statuses": {
+      "200": 4,
+      "504": 64
+    },
+    "elapsed": 27.29,
+    "p95_seconds": 5.008
+  },
+  "memory-tight": {
+    "requests": 1954,
+    "statuses": {
+      "502": 1869,
+      "504": 48,
+      "200": 36,
+      "0": 1
+    },
+    "elapsed": 27.58,
+    "p95_seconds": 1.171
+  },
+  "stable": {
+    "requests": 838,
+    "statuses": {
+      "200": 838
+    },
+    "elapsed": 27.33,
+    "p95_seconds": 0.676
+  }
+}

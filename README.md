@@ -12,5 +12,7 @@
 | 0              | [lab0](/lab0) |
 | 1              | [lab1](/lab1) |
 | 1*             | [lab1_zvezdochka](/lab1_zvezdochka) |
+| 2              | [lab2](/lab2) |
+| 2*             | [lab2_zvezdochka](/lab2_zvezdochka) |
 
 ![0.gif](lab0/docs/screenshots/0.gif)

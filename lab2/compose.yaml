@@ -1,0 +1,57 @@
+name: gameshelf-lab2
+services:
+  db:
+    image: gameshelf-lab2-postgres:good
+    build: ./postgres
+    environment:
+      POSTGRES_DB: games
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres_local
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks: [data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h 127.0.0.1 -U postgres -d games"]
+      interval: 3s
+      timeout: 2s
+      retries: 20
+
+  backend:
+    image: gameshelf-lab2-backend:good
+    build: ./backend
+    environment:
+      DB_URL: jdbc:postgresql://db:5432/games?connectTimeout=2&socketTimeout=3
+      DB_USER: gamer
+      DB_PASSWORD: gamer_local
+      INSTANCE_ID: lab2
+    networks: [web, data]
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    image: gameshelf-lab2-frontend:good
+    build: ./frontend
+    ports: ["127.0.0.1:8082:80"]
+    networks: [web]
+    depends_on:
+      backend:
+        condition: service_healthy
+
+  checker:
+    profiles: [tools]
+    build: ./tools
+    image: gameshelf-lab2-tools
+    volumes:
+      - .:/workspace/lab2
+      - /var/run/docker.sock:/var/run/docker.sock
+    working_dir: /workspace/lab2
+    entrypoint: ["python3", "-u", "tools/check.py"]
+    networks: [web]
+
+networks:
+  web:
+  data:
+    internal: true
+volumes:
+  pgdata:

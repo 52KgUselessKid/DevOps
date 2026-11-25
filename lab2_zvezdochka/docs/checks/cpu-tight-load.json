@@ -1,0 +1,9 @@
+{
+  "requests": 68,
+  "statuses": {
+    "200": 4,
+    "504": 64
+  },
+  "elapsed": 27.29,
+  "p95_seconds": 5.008
+}

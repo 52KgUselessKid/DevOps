@@ -1,0 +1,69 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.33kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:21.0.9_10-jre-alpine@sha256:08eecc477dbe3f2e33daac27f36e41daf7f4ec51d2f3396006e54fa41832c74c
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/maven:3.9-eclipse-temurin-21@sha256:99e61abcff91a9b1333463bd8451fb18495d6eba9250ac66a338b518f8278320
+#3 DONE 0.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 79B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 DONE 0.0s
+
+#6 [stage-1 1/5] FROM docker.io/library/eclipse-temurin:21.0.9_10-jre-alpine@sha256:08eecc477dbe3f2e33daac27f36e41daf7f4ec51d2f3396006e54fa41832c74c
+#6 resolve docker.io/library/eclipse-temurin:21.0.9_10-jre-alpine@sha256:08eecc477dbe3f2e33daac27f36e41daf7f4ec51d2f3396006e54fa41832c74c 0.0s done
+#6 DONE 0.0s
+
+#7 [build 1/6] FROM docker.io/library/maven:3.9-eclipse-temurin-21@sha256:99e61abcff91a9b1333463bd8451fb18495d6eba9250ac66a338b518f8278320
+#7 resolve docker.io/library/maven:3.9-eclipse-temurin-21@sha256:99e61abcff91a9b1333463bd8451fb18495d6eba9250ac66a338b518f8278320 0.0s done
+#7 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 9.01kB done
+#5 DONE 0.0s
+
+#8 [build 2/6] WORKDIR /build
+#8 CACHED
+
+#9 [build 3/6] COPY pom.xml .
+#9 DONE 0.1s
+
+#10 [build 4/6] RUN mvn -B -q -DskipTests dependency:go-offline dependency:copy-dependencies
+#10 DONE 82.3s
+
+#11 [build 5/6] COPY src ./src
+#11 DONE 0.1s
+
+#12 [build 6/6] RUN mvn -B -q -o -DskipTests package
+#12 DONE 4.7s
+
+#13 [stage-1 2/5] WORKDIR /app
+#13 CACHED
+
+#14 [stage-1 3/5] RUN addgroup -S shelf && adduser -S -G shelf shelf
+#14 CACHED
+
+#15 [stage-1 4/5] COPY --from=build --chown=shelf:shelf /build/target/backend-lab2-1.0.0.jar ./app.jar
+#15 DONE 0.1s
+
+#16 [stage-1 5/5] COPY --from=build --chown=shelf:shelf /build/target/dependency ./lib
+#16 DONE 0.1s
+
+#17 exporting to image
+#17 exporting layers
+#17 exporting layers 0.2s done
+#17 exporting manifest sha256:18fee1f164f38c8625a603a66d824da4bda998a5bd764d8b0388aacd5c981ccf 0.0s done
+#17 exporting config sha256:35b7d8d072767f3b4d6852416a444b9d6604b43ae3d0f9f694cf6579185ac0a2 0.0s done
+#17 exporting attestation manifest sha256:24fe4bf0cdda6ece02c95320cfb04b24f5af9a87f2d220f2085f08f07a622af0 0.0s done
+#17 exporting manifest list sha256:76c225eef06d8d59aca92d4ba667fbfc3a9977bbf195cb78df3b3410a00bebd1
+#17 exporting manifest list sha256:76c225eef06d8d59aca92d4ba667fbfc3a9977bbf195cb78df3b3410a00bebd1 0.0s done
+#17 naming to docker.io/library/gameshelf-lab2-backend:good done
+#17 unpacking to docker.io/library/gameshelf-lab2-backend:good 0.0s done
+#17 DONE 0.4s

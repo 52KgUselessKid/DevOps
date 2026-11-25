@@ -1,0 +1,26 @@
+{
+  "State": {
+    "Status": "restarting",
+    "Running": true,
+    "Paused": false,
+    "Restarting": true,
+    "OOMKilled": true,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 137,
+    "Error": "",
+    "StartedAt": "2026-11-23T21:21:47.718920554Z",
+    "FinishedAt": "2026-11-23T21:21:50.089308698Z",
+    "Health": {
+      "Status": "unhealthy",
+      "FailingStreak": 0,
+      "Log": []
+    }
+  },
+  "RestartCount": 7,
+  "HostConfig": {
+    "Memory": 75497472,
+    "MemorySwap": 75497472,
+    "NanoCpus": 1000000000
+  }
+}

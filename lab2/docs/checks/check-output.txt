@@ -1,0 +1,29 @@
+LAB2 CHECKS | 2026-11-23T21:11:20.910339+00:00
+NAME                        IMAGE                                                                     COMMAND                  SERVICE    CREATED          STATUS                    PORTS
+gameshelf-lab2-backend-1    sha256:f1a8916b66f77ad6ff6a56aacaa4079203b125f2a516814848105eb097ea069f   "java -cp /app/app.j…"   backend    38 seconds ago   Up 33 seconds (healthy)   8080/tcp
+gameshelf-lab2-db-1         sha256:9db443e676cd761f1212c163f2e89c208806acf44ac253db455192dae20a3f1b   "docker-entrypoint.s…"   db         39 seconds ago   Up 37 seconds (healthy)   5432/tcp
+gameshelf-lab2-frontend-1   gameshelf-lab2-frontend:good                                              "/docker-entrypoint.…"   frontend   13 seconds ago   Up 11 seconds (healthy)   127.0.0.1:8082->80/tcp
+
+[1] Non-root user
+$ docker compose exec -T backend whoami
+shelf
+[2] Save a game and read it through nginx
+POST /api/games -> 201; id=1
+[3] Remove and recreate database container, keep named volume
+$ docker rm -f 5ac1029a09fb
+$ docker compose up -d db
+Container gameshelf-lab2-db-1  Creating
+ Container gameshelf-lab2-db-1  Created
+ Container gameshelf-lab2-db-1  Starting
+ Container gameshelf-lab2-db-1  Started
+Old container: 5ac1029a09fb; new: 3f0503dfcaf6
+GET /api/games -> 200; SAME id=1 survived
+Volume: gameshelf-lab2_pgdata
+[4] Frontend cannot connect directly to PostgreSQL
+$ docker compose exec -T frontend nc -z -w 2 db 5432
+exit=1; nc: getaddrinfo for host "db" port 5432: Name does not resolve
+$ docker compose exec -T frontend nc -z -w 2 172.21.0.2 5432
+exit=1; connection blocked
+Frontend -> backend -> PostgreSQL: HTTP 200
+
+ALL CHECKS PASSED. Database and games are still present.
